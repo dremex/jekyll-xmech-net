@@ -20,13 +20,14 @@ description: > # this means to ignore newlines until "baseurl:"
   I love working with technology, rock climbing, and gaming. 
   Join me while I build some things and ramble about others.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.xmech.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dremex
 github_username:  dremex
 
 # Build settings
 markdown: kramdown
 theme: minima
+highlighter: rouge
 
 # Pagination settings
 pagination:
@@ -41,6 +42,7 @@ pagination:
 permalink: pretty
 
 gems:
+  - rouge
   - jekyll-feed
   - jekyll-paginate-v2
 exclude:
