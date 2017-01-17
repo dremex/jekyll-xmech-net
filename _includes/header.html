@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+    <meta content="True" name="HandheldFriendly">
+    <meta content="320" name="MobileOptimized">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="on" http-equiv="cleartype">
+    <meta content="off" http-equiv="x-dns-prefetch-control">
+    <link href="{{ "/assets/css/custom2.css" }}" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="{{ "/assets/javascript/html5shiv.js" }}"></script>
+    <![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body id="home">
+    <div class="home_header fadeInDown animated clearfix" id="cover_wrap">
+        <header class="clearfix" id="masthead">
+            <hgroup class="intro">
+                <h1>
+                  <a class="home" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+                  <span><a href="http://twitter.com/dremex" target="_blank">@dremex</a></span>
+                </h1>
+            </hgroup>
+
+            <nav id="cover">
+                <ul class="list-none" id="headernav">
+                    <nav class="main">
+                        <ul class="menu">
+                            <li class="index-1 first">
+                                <a href="/" title="Home" class="current first">Home</a>
+                            </li>
+                            <li class="index-2">
+                                <a href="/" title="Photos" class="current">Photos</a>
+                            </li>
+                            <li class="index-3 last">
+                                <a href="/" title="About" class="last">About</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </ul>
+            </nav>
+        </header>
+    </div>

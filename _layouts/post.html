@@ -1,0 +1,21 @@
+{% include header.html %}
+
+    <div id="site">
+        <div class="home-postex animated fadeInUp" id="postex">
+
+            <article id="post" role="main">
+
+                <header class="entry-title">
+                    <h2>{{ page.title | escape }}</h2>
+                    <p class="article-date">{{ page.date | date: "%b %-d, %Y" }}</p>
+                </header>
+
+                {{ content }}
+
+            </article>
+
+    </div>
+            
+    <script src="{{ "/assets/javascript/jquery.lazyload.min.js" }}"></script>
+
+{% include footer.html %}

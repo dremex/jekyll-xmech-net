@@ -1,0 +1,54 @@
+{% include header.html %}
+
+    <div id="site">
+        <div class="home-postex" id="postex">
+            <div class="clearfix animated fadeInUp" id="about-kerry">
+                <a href="/about/" title="About"><img src="{{ "/assets/image/kerry.jpg" }}"></a>
+
+                <div class="content">
+                    <h4>Hello, I'm Kerry.</h4>
+                    <p class="larger">I'm a web developer at <a href="https://www.taskeasy.com" target="_blank">TaskEasy</a> in Salt Lake City.</p>
+                    <p>I love working with technology, rock climbing, and gaming. Join me while I build some things and ramble about others.</p>
+                </div>
+            </div>
+
+            <ul class="animated fadeInUp list-none" id="post-grid">
+
+              {% for post in site.posts limit:5 %}
+                <li>
+                    <header class="entry-title">
+                        <a href="{{ post.url | relative_url }}" title="{{ post.title | escape }}">
+                          <div class="content">
+                              <h2>{{ post.title | escape }}</h2>
+                              <p class="post-date">{{ post.date | date: "%A %B %e, %Y" }}</p>
+                              <p class="oneliner">{{ post.excerpt }}</p>
+                          </div>
+                        </a>
+                    </header>
+                </li>
+              {% endfor %}
+
+            </ul>
+
+            <div class="view-more-posts">
+                <h2>
+                    <a href="{{ "/posts/" | relative_url }}" title="Post Archives">View more posts</a>
+                </h2>
+            </div>
+        </div>
+
+        <div class="photosection">
+            <div class="photosection_content">
+                <div class="imglist clearfix">
+                  <a href="{{ site.baseurl }}{% link _posts/2015-07-23-ten-sleep-2015.markdown %}" title="Photos">
+                      <div class="img-masonry last-icn morepics" style="background: url({{ "/assets/image/tensleep2015.jpg" }}) 0 0 no-repeat;background-position: 0px -160px;">
+                          <div class="photo-description">
+                              <p>Ten Sleep 2015</p>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+            </div>
+        </div>
+
+{% include footer.html %}
