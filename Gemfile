@@ -23,4 +23,5 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll-paginate-v2"
    gem "jekyll-maps"
+   gem "jekyll-deploy"
 end

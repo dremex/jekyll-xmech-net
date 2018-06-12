@@ -44,6 +44,9 @@ maps:
   google:
     api_key: AIzaSyBgt9m466yuFoT1XjLyzMVwoKwNPUVDLsI
 
+deploy:
+  - rsync -aze ssh --delete ~/code/jekyll-xmech-net/_site/. xmech.net:/var/www/xmech.net/public_html
+
 # Pagination settings
 pagination:
   enabled: true
