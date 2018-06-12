@@ -16,8 +16,8 @@
 title: Kerry Peterson
 email: kerry@xmech.net
 description: > # this means to ignore newlines until "baseurl:"
-  Hello, I'm Kerry. I'm a web developer at TaskEasy in Salt Lake City.
-  I love working with technology, rock climbing, and gaming. 
+  Hello, I'm Kerry. I'm a web developer at MarketDial in Salt Lake City.
+  I love working with technology, rock climbing, and gaming.
   Join me while I build some things and ramble about others.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.xmech.net" # the base hostname & protocol for your site, e.g. http://example.com
@@ -28,6 +28,21 @@ github_username:  dremex
 markdown: kramdown
 theme: minima
 highlighter: rouge
+
+# Custom collections
+collections:
+  diveLogs:
+    output: true
+
+defaults:
+  - scope:
+      type: "diveLogs"
+    values:
+      layout: "diveLog"
+
+maps:
+  google:
+    api_key: AIzaSyBgt9m466yuFoT1XjLyzMVwoKwNPUVDLsI
 
 # Pagination settings
 pagination:
@@ -41,7 +56,7 @@ pagination:
 
 permalink: pretty
 
-gems:
+plugins:
   - rouge
   - jekyll-feed
   - jekyll-paginate-v2

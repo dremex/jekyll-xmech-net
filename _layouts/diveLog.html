@@ -1,0 +1,85 @@
+{% include header.html %}
+
+    <div id="site">
+        <div class="home-postex animated fadeInUp" id="postex">
+
+          <article id="post" role="main">
+
+              <header class="entry-title">
+                  <h3>{{ page.location.name }}, {{ page.location.place }}</h3>
+                  <p class="article-date">{{ page.date | date: "%B %-d" }}{{ page.date | date: '%d' | ordinal }}, {{ page.date | date: "%Y" }}</p>
+              </header>
+
+              <div class="dive-log-wrapper">
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Bottom Time</span>
+                  {{ page.profile.bottomTime }} min
+                </div>
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Max Depth</span>
+                  {{ page.profile.depth.max }} feet
+                </div>
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Average Depth</span>
+                  {% if page.profile.depth.average %}
+                    {{ page.profile.depth.average }} feet
+                  {% else %}
+                    N/A
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="dive-log-wrapper">
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Water</span>
+                  {{ page.conditions.water.type }} - {{ page.conditions.water.temperature }}&deg;
+                </div>
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Visibility</span>
+                  {% if page.conditions.visibility %}
+                    {{ page.conditions.visibility }} feet
+                  {% else %}
+                    N/A
+                  {% endif %}
+                </div>
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Day/Night</span>
+                  {{ page.conditions.dayOrNight }}
+                </div>
+              </div>
+
+              <div class="dive-log-wrapper">
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Hood</span>
+                  {{ page.equipment.exposure.hood }}
+                </div>
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Gloves</span>
+                  {{ page.equipment.exposure.gloves }}
+                </div>
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Wetsuit</span>
+                  {{ page.equipment.exposure.wetsuit }}
+                </div>
+              </div>
+
+              <div class="dive-log-wrapper">
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Weight</span>
+                  {{ page.equipment.weight }} lbs
+                </div>
+                <div class="dive-log-box">
+                  <span class="dive-log-box-header">Gas</span>
+                  {{ page.equipment.gas }}
+                </div>
+              </div>
+
+              <div id="diveLogComments">
+                {{ content }}
+              </div>
+
+          </article>
+
+    </div>
+
+{% include footer.html %}

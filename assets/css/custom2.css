@@ -368,6 +368,36 @@ hr.light {
   float: right;
 }
 
+.dive-map {
+  margin: 10px 30px 10px 30px;
+  text-align: center;
+}
+
+.dive-log-box {
+  text-align: center;
+  color: #999;
+  padding: 15px;
+}
+
+.dive-log-box-header {
+  display: block;
+  color: #2c251d;
+  font-size: 125%;
+}
+
+.dive-log-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  border-top: 1px solid #ebebeb;
+}
+
+#diveLogComments {
+  border-top: 1px solid #ebebeb;
+  padding-top: 15px;
+  font-size: 90%;
+}
+
 .photo-description {
   display: none;
 }
