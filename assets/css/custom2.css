@@ -117,27 +117,6 @@ ul {
   width: 53em;
 }
 
-hr {
-    height:1px;
-    display:block;
-    border:none;
-    margin:40px 0;
-}
-
-hr.article {
-    height:3px;
-    background-repeat:repeat-y
-}
-
-hr.article-1 {
-    height:1px;
-    background-repeat:repeat-y
-}
-
-hr.light {
-    opacity:.7
-}
-
 #masthead {
   margin: 0 auto;
   padding: 15px 0;
@@ -1054,9 +1033,6 @@ ul {
 .pagerContainer {
   text-align: center;
   margin-bottom: 1em;
-}
-
-.pagination {
 }
 
 .pagination ul {
